@@ -40,12 +40,17 @@ public class myServlet extends HttpServlet {
 		
 		response.setContentType("text/html; charset=UTF-8");
 		
+		String id = request.getParameter("id");
+		String pwd = request.getParameter("pw");
+		
 		PrintWriter pw = response.getWriter();
 		pw.println("<html>");
 		pw.println("<head>");
 		pw.println("</head>");
 		pw.println("<body>");
 		pw.println("<h1> POST 방식으로 호출되었습니다.");
+		pw.println("<p>아이디: " + id + "<br/>");
+		pw.println("비밀번호: " + pwd + "<br/>");
 		pw.println("</body>");
 		pw.println("</html>");
 		pw.close();		
