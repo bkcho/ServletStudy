@@ -47,7 +47,9 @@ public class myServlet extends HttpServlet {
 		String tel = getInitParameter("tel");
 		String address = getInitParameter("address");
 		String sex = getInitParameter("sex");
-		String name = getInitParameter("name");
+		String name = getInitParameter("name");		
+		String school = getServletContext().getInitParameter("school");
+		String animals = getServletContext().getInitParameter("animals");
 		
 		PrintWriter pw = response.getWriter();
 		pw.println("<html>");
@@ -60,7 +62,9 @@ public class myServlet extends HttpServlet {
 		pw.println("전화번호: " + tel + "<br/>");
 		pw.println("주소: " + address + "<br/>");
 		pw.println("성별: " + sex + "<br/>");
-		pw.println("이름: " + name + "<br/>");		
+		pw.println("이름: " + name + "<br/>");	
+		pw.println("학교: " + school + "<br/>");
+		pw.println("동물: " + animals + "<br/>");		
 		pw.println("</body>");
 		pw.println("</html>");
 		pw.close();		

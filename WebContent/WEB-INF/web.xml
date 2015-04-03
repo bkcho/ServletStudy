@@ -10,6 +10,16 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+  <!-- servlet 테그보다 앞에 위치해야한다. -->
+  <context-param>
+  	<param-name>school</param-name>
+  	<param-value>cn대학교</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>animals</param-name>
+  	<param-value>고양이</param-value>
+  </context-param>
+  
   <!-- xml에서 에노테이션 정의하기  -->
   <!-- servlet-name 은 서로 같게 해줘야 하며 결국 url-pattern 으로 연결된다. -->
   <servlet>
@@ -31,5 +41,5 @@
   	<servlet-name>myServlet</servlet-name>
   	<url-pattern>/mySvr2</url-pattern>
   </servlet-mapping>
-    
+  
 </web-app>
