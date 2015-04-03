@@ -10,14 +10,15 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
-  <!-- xml에서 에노테이션 정의하기 ( 웹주소를 간단하게 해주는 기능 ) 클래스명(myServlet)을 같이 해줘야 한다.. -->
+  <!-- xml에서 에노테이션 정의하기  -->
+  <!-- servlet-name 은 서로 같게 해줘야 하며 결국 url-pattern 으로 연결된다. -->
   <servlet>
   	<servlet-name>myServlet</servlet-name>
-  	<servlet-class>com.servlet.myServlet</servlet-class>
+  	<servlet-class>com.servletStudy.myServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>myServlet</servlet-name>
-  	<url-pattern>/mySv2</url-pattern>
+  	<url-pattern>/mySvr2</url-pattern>
   </servlet-mapping>
     
 </web-app>
