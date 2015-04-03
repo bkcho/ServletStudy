@@ -3,6 +3,8 @@ package com.servletStudy;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -57,5 +59,15 @@ public class myServlet extends HttpServlet {
 	@Override
 	public void destroy() {
 		System.out.println("destroy");
+	}
+	
+	@PostConstruct    // <-- @PostConstruct 에노테이션을 추가하면  init() 함수보다 먼저 수행된다. initPostConstruc 함수명은 사용자가 결정한다.
+	private void initPostConstruc() {
+		System.out.println("initPostConstruc");
+	}
+	
+	@PreDestroy
+	private void destoryPreDestory() {
+		System.out.println("destoryPreDestory");
 	}
 }
