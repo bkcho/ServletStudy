@@ -35,5 +35,17 @@ public class myServlet extends HttpServlet {
  
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("myServlet");
+		
+		response.setContentType("text/html; charset=UTF-8");
+		
+		PrintWriter pw = response.getWriter();
+		pw.println("<html>");
+		pw.println("<head>");
+		pw.println("</head>");
+		pw.println("<body>");
+		pw.println("<h1> POST 방식으로 호출되었습니다.");
+		pw.println("</body>");
+		pw.println("</html>");
+		pw.close();		
 	}
 }
