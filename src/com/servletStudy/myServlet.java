@@ -6,12 +6,13 @@ import java.io.PrintWriter;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/mySvr") // http://localhost:8080/ServletStudy/mySvr
+@WebServlet(urlPatterns={"/mySvr"}, initParams={@WebInitParam(name="sex", value="남자"), @WebInitParam(name="name", value="조병국")}) // http://localhost:8080/ServletStudy/mySvr
 public class myServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -43,6 +44,11 @@ public class myServlet extends HttpServlet {
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pw");
 		
+		String tel = getInitParameter("tel");
+		String address = getInitParameter("address");
+		String sex = getInitParameter("sex");
+		String name = getInitParameter("name");
+		
 		PrintWriter pw = response.getWriter();
 		pw.println("<html>");
 		pw.println("<head>");
@@ -51,6 +57,10 @@ public class myServlet extends HttpServlet {
 		pw.println("<h1> POST 방식으로 호출되었습니다.");
 		pw.println("<p>아이디: " + id + "<br/>");
 		pw.println("비밀번호: " + pwd + "<br/>");
+		pw.println("전화번호: " + tel + "<br/>");
+		pw.println("주소: " + address + "<br/>");
+		pw.println("성별: " + sex + "<br/>");
+		pw.println("이름: " + name + "<br/>");		
 		pw.println("</body>");
 		pw.println("</html>");
 		pw.close();		

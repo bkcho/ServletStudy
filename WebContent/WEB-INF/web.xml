@@ -15,6 +15,17 @@
   <servlet>
   	<servlet-name>myServlet</servlet-name>
   	<servlet-class>com.servletStudy.myServlet</servlet-class>
+  	
+  	<init-param>
+		<param-name>tel</param-name>
+		<param-value>010-2627-055x</param-value>
+	</init-param>
+
+	<init-param>
+		<param-name>address</param-name>
+		<param-value>korea</param-value>
+	</init-param>
+	
   </servlet>
   <servlet-mapping>
   	<servlet-name>myServlet</servlet-name>
