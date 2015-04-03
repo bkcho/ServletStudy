@@ -42,4 +42,9 @@
   	<url-pattern>/mySvr2</url-pattern>
   </servlet-mapping>
   
+  <!-- 리스너 클래스를 호출하기 위한 것 -->
+  <listener>
+  	<listener-class>com.servletStudy.ServletListenerEx</listener-class>
+  </listener>
+  
 </web-app>
