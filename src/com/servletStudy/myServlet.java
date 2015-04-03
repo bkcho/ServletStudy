@@ -48,4 +48,14 @@ public class myServlet extends HttpServlet {
 		pw.println("</html>");
 		pw.close();		
 	}
+	
+	@Override
+	public void init() throws ServletException {		
+		System.out.println("init");
+	}
+	
+	@Override
+	public void destroy() {
+		System.out.println("destroy");
+	}
 }
