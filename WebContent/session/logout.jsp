@@ -19,7 +19,9 @@
 			session.removeAttribute(sName);  /* 세션을 삭제하는 부분 */
 			out.println(sValue + " 님 로그아웃 되었습니다.<p>");
 		}
-	}	 
+	}
+	
+	/* session.invalidate(); 모든 세션을 삭제하는 명령어 */	
 %>
 
 <a href="sessiontest.jsp">sessionTest</a>
