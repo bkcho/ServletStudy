@@ -47,4 +47,18 @@
   	<listener-class>com.servletStudy.ServletListenerEx</listener-class>
   </listener>
   
+  <!-- 예외처리 프로세스 -->
+  <error-page>
+  	<error-code>404</error-code> <!-- 없는 페이지 접근할 때 발생-->
+  	<location>/error404.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/error500.jsp</location>
+  </error-page>
+  <error-page>
+  	<exception-type>java.lang.Throwable</exception-type>
+  	<location>/error500.jsp</location>
+  </error-page>
+  
 </web-app>
