@@ -6,6 +6,10 @@ public class MemberDto {
 	private String pw;
 	private String name;
 	private String phone;
+	
+	public MemberDto() {
+		// TODO Auto-generated constructor stub
+	}
 	 
 	public MemberDto(String id, String pw, String name, String phone) {
 		super();
