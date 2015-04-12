@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns={"/mySvr"}, initParams={@WebInitParam(name="sex", value="남자"), @WebInitParam(name="name", value="조병국")}) // http://localhost:8080/ServletStudy/mySvr
+@WebServlet(urlPatterns={"/mySvr","/mySvr3"}, initParams={@WebInitParam(name="sex", value="남자"), @WebInitParam(name="name", value="조병국")}) // http://localhost:8080/ServletStudy/mySvr
 public class myServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
